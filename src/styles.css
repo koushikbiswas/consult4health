@@ -65,6 +65,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'HelveticaBold';
+  src: url('assets/fonts/Helvetica-Bold.eot');
+  src: url('assets/fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+      url('assets/fonts/Helvetica-Bold.woff2') format('woff2'),
+      url('assets/fonts/Helvetica-Bold.woff') format('woff'),
+      url('assets/fonts/Helvetica-Bold.ttf') format('truetype'),
+      url('assets/fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'ArnoProRegular';
@@ -222,6 +234,25 @@ a {
   width: 100%;
 }
 
+
+.mat-form-field-can-float.mat-form-field-should-float.mat-focused
+  .mat-form-field-label {
+  display: none !important;
+}
+.mat-card-header-text {
+  margin: 0 !important;
+}
+.mat-card {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+.mat-list-item .mat-list-item-content {
+  padding: 0 !important;
+}
+.mat-card-actions {
+  margin-bottom: 0px !important;
+}
+
 .generalcls .mat-card-header-text {
   margin: 0 !important;
   width: 100%;
@@ -233,16 +264,16 @@ a {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  margin-bottom: 18px !important;
+  /* margin-bottom: 18px !important; */
   color: #4b4949;
   width: 100%;
   align-items: center;
   justify-content: center;
-  margin-top: 20px !important;
+  /* margin-top: 20px !important; */
 }
-.generalcls .mat-card-title:nth-child(1) {
+/* .generalcls .mat-card-title:nth-child(1) {
   margin-top: 0px !important;
-}
+} */
 .generalcls .mat-card-title span span {
   font-family: "OpenSansbold";
   padding-left: 10px;
@@ -336,18 +367,17 @@ a {
 }
 .generalcls h1 span {
   color: #fed204;
-  font-family: "OpenSansbold";
 }
 .generalcls h2 {
-  font-family: "OpenSansSemibold";
+  font-family: "Helvetica75Bold";
   font-size: 28px !important;
   line-height: 36px !important;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  margin-bottom: 18px;
-  margin-top: 25px;
-  color: #fff;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #151616;
   white-space: normal !important;
   width: 100%;
 }
@@ -365,6 +395,7 @@ a {
 .generalcls .bg2 .mat-card-title {
   color: #898787 !important;
 }
+
 .ptb-78 {
   padding-top:78px !important;
   padding-bottom: 78px !important;
@@ -521,23 +552,6 @@ a {
   cursor: pointer;
   object-fit: cover;
 }
-.mat-form-field-can-float.mat-form-field-should-float.mat-focused
-  .mat-form-field-label {
-  display: none !important;
-}
-.mat-card-header-text {
-  margin: 0 !important;
-}
-.mat-card {
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
-.mat-list-item .mat-list-item-content {
-  padding: 0 !important;
-}
-.mat-card-actions {
-  margin-bottom: 0px !important;
-}
 .formcls .mat-select-value-text {
   font-size: 16px !important;
 }
@@ -551,6 +565,12 @@ a {
 
 .mainwrappercontent1341 {
   width: 1341px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+.mainwrappercontent1618 {
+  width: 1618px;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -909,7 +929,7 @@ formcls .mat-select-panel .mat-option {
   box-shadow: none !important;
 }
 .imgdiv.imgdivfirst {
-  margin-top: 0%;
+  margin-top: -12%;
   z-index: 999;
   background: transparent;
   display: block;
@@ -918,6 +938,10 @@ formcls .mat-select-panel .mat-option {
   width: 100%;
   display: block;
 }
+
+.c4hblock1bg1 .mat-card-header .mat-card-title{margin-bottom: 0 !important;}
+.generalcls.c4hblock1bg1 h1{margin-bottom: 0 !important;}
+.c4hblock2content .mat-list-base .mat-list-item .mat-list-item-content{flex-direction: column;}
 
 @media (max-width: 1700px) {
   .mainwrappercontent {
@@ -932,6 +956,15 @@ formcls .mat-select-panel .mat-option {
       left: -50px;
       position: absolute;
       top: 65px;
+  }
+}
+
+@media (max-width: 1666px) {
+  .mainwrappercontent1618 {
+    width: 96%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
   }
 }
 
