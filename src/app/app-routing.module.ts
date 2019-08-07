@@ -1,21 +1,24 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { MetaGuard } from '@ngx-meta/core';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { MetaGuard } from "@ngx-meta/core";
 
-import { LandingComponent } from './landing/landing.component';
+import { LandingComponent } from "./landing/landing.component";
 
 const appRoutes: Routes = [
-  
-  { path: '', component: LandingComponent,data: {
-    meta: {
-        title: '',
-        description: ''
+  {
+    path: "",
+    component: LandingComponent,
+    data: {
+      meta: {
+        title: "",
+        description: ""
+      }
     }
-} }
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
