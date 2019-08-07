@@ -1,20 +1,26 @@
+.scroll-to-top{position:fixed;bottom:20px;right:30px;z-index:999999;border:none;outline:none;background-color:#ff0000;color:#fff;cursor:pointer;padding:5px 8px;border-radius:0;font-size:18px;opacity:0;transition:all .2s ease-in-out}
+.scroll-to-top a{color:#fff!important;padding: 2px; display: inline-block;}
+.scroll-to-top:hover{background-color:#ff0000; color:#fff!important;}
+.show-scrollTop{opacity:1;transition:all .2s ease-in-out}
+
+
+
+
 .influencebannertopblock {
   background: url(../../assets/images/homebannerbg.jpg) #fff;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px !important;
   min-height: 860px;
+  position: relative;
 }
+
 
 .vpblock1imgleftwrapper {
   display: none;
 }
 
 .topbannerhomecontentform {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -36,7 +42,8 @@
   float: right;
   padding-top: 30px;
   margin-right: -50px;
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 
 .vpblock1bg.influencebannertopblock .vpblock1wrapper {
@@ -101,6 +108,8 @@
   padding: 20px;
   color: #fff;
   width: 568px;
+  position: relative;
+  z-index: 99;
 }
 
 .bannerbottomsection h1 {
@@ -141,7 +150,11 @@
   position: absolute;
   top: 65px;
 }
-
+.logowrapper a{    
+	  z-index: 999;
+    position: relative;
+    display: inline-block;
+}
 .logowrapper img {
   max-width: 100%;
 }
@@ -167,7 +180,7 @@
   background: url(../../assets/images/c4hblock1bg.jpg);
   background-position: top -1% right;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   z-index: 999;
 }
 
@@ -292,12 +305,12 @@
 .c4hblock2bg .mat-card-header h2 {
   text-align: center;
 }
-. {
+/* . {
   width: initial;
   left: 0;
   top: 0;
   position: absolute;
-}
+} */
 
 .c4hblock2content .mat-list-base {
   display: -webkit-box;
@@ -331,11 +344,6 @@
 }
 .c4hblock2content .mat-list-base .mat-list-item p {
   padding: 20px 20px 20px 40px;
-}
-
-.c4hblock2content .mat-list-base .mat-list-item:nth-child(-n + 2) {
-  page-break-after: always; /* CSS 2.1 syntax */
-  break-after: always; /* New syntax */
 }
 
 .c4hblock2bg.generalcls .mat-card-image-wrapper {
@@ -515,7 +523,10 @@
 .c4hblock5 {
   text-align: center;
   margin-top: -6.5%;
-  padding-bottom: 20px !important;
+  padding-bottom: 20px !important;  
+  z-index: 9999;
+  position: relative;
+  background-color: transparent;
 }
 .c4hblock5 img {
   width: inherit;
@@ -553,16 +564,70 @@
   font-size: 18px;
 }
 
-@media (max-width: 1700px) {
-  .c4hblock1bg1 {
-    height: 480px;
+@media (max-width: 1800px) {
+  .c4hblock1bg1 {    
+    height: 500px;
   }
-  . {
-    width: 728px;
+  .logowrapper {
+    left: -36px;
   }
 }
 
+@media (max-width: 1700px) {
+  .c4hblock2bg .mat-card-header h2, .c4hblock3bg .mat-card-header h2 {
+    width: 62%;
+    margin: 0 auto;
+    font-size: 22px !important;
+    line-height: normal;
+  }
+  .c4hblock2bgtopleft {
+    position: absolute;
+    top: 0;
+    left: -9%;
+    width: initial;
+}
+  .influencebannertopblock:after{
+    width:100%;
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 65%);
+    height:100%;
+  }
+  .c4hblock1bg1 {
+    height: 480px;
+  }
+  .logowrapper {
+    display: block;
+    flex: 1 1 20%;
+    left: -50px;
+    position: absolute;
+    top: 65px;
+  }
+
+
+  /* .logowrapper:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    display: inline-block;
+  } */
+  
+  /* . {
+    width: 728px;
+  } */
+}
+
 @media (max-width: 1600px) {
+  .c4hblock1bg1 {    
+    height: 450px;
+  }
   .logowrapper {
     display: block;
     flex: 1 1 20%;
@@ -584,13 +649,12 @@
   .c4hblock1bg1 {
     height: 430px;
   }
-  .generalcls h1 {
-    font-size: 40px !important;
-    line-height: 40px !important;
-  }
 }
 
 @media (max-width: 1440px) {
+  .c4hblock1bg1 {    
+    height: 400px;
+  }
   .influencebannertopblock {
     background: url(../../assets/images/homebannerbg.jpg) #fff;
     background-repeat: no-repeat;
@@ -608,16 +672,8 @@
   .c4hblock5 {
     margin-top: -4.5%;
   }
-  .generalcls h1 {
-    font-size: 36px !important;
-    line-height: normal !important;
-  }
   .c4hblock2content .mat-list-base .mat-list-item {
     width: 30.33%;
-  }
-  .generalcls p {
-    font-family: "HelveticaRegular";
-    font-size: 18px;
   }
   .c4hblock3bgimgright {
     background-position: top right -160%;
@@ -655,43 +711,42 @@
 }
 
 @media (max-width: 1300px) {
+  .c4hblock2bg .mat-card-header h2, .c4hblock3bg .mat-card-header h2  {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 25px !important;
+    line-height: normal;
+}
   .c4hblock1bg1 {
     height: 356px;
   }
   .c4hblock3bgimgright {
-    background-position: top right -250%;
-  }
-  .generalcls h1 {
-    font-size: 28px !important;
-    line-height: normal !important;
+    background-position:top right -274px;
   }
   .c4hblock2bg.generalcls .mat-card-image-wrapper {
     height: 153px;
   }
-  .generalcls .mat-card-title {
-    margin: 0 auto;
-    width: 60%;
-  }
+  .c4hblock2bgtopleft{
+    position: absolute;
+    top: 0;
+    left: -17%;
+    width: initial;
+}
+
 }
 @media (max-width: 1199px) {
+ 
+  .influencebannertopblock:after {display: none;}
   .c4hblock1bg1 {
     height: 355px;
   }
 
-  .generalcls h1 {
-    font-size: 28px !important;
-    line-height: 28px !important;
-  }
   .c4hblock2content .mat-list-base .mat-list-item {
     width: 30.33%;
   }
 
   .c4hblock2bg.generalcls .mat-card-image-wrapper {
     height: 148px;
-  }
-
-  .generalcls p {
-    font-size: 18px;
   }
 
   .c4hblock5 .logowrapper {
@@ -800,21 +855,52 @@
     margin-right: auto;
     position: relative;
   }
-  .generalcls .mat-card-title {
-    margin: 0 auto;
-    width: 75%;
+  .c4hblock3bgimgright {
+    background-position: top right -340px;
+  }
+  .c4hblock4bg.c4hblock1bg1 {
+    margin-top: -17%;
+  }
+  .generalcls h2 {
+    font-size: 22px !important;
+    line-height: normal!important;
   }
 }
+
+@media (max-width: 1140px) {
+  .c4hblock1bg1{
+    height: 324px;
+  }
+  .c4hblock2bgtopleft{
+    position: absolute;
+    top: 0;
+    left: -18%;
+    width: initial;
+  }
+}
+
+@media (max-width: 1100px) {
+  .c4hblock1bg1 {
+    height: 300px;
+  }
+  .c4hblock2bgtopleft {
+    position: absolute;
+    top: 0;
+    left: -9%;
+    width: 55%;
+}
+}
+
+
 @media (max-width: 1024px) {
+  .c4hblock4bg.c4hblock1bg1 {
+    margin-top: -17%;
+  }
   .c4hblock3bgimgright {
     background-position: top right -304px;
   }
   .c4hblock1bg1 {
     height: 295px;
-  }
-  .generalcls h2 {
-    font-size: 24px !important;
-    line-height: normal !important;
   }
 }
 
@@ -827,14 +913,6 @@
     background-position: top right 0;
     padding-top: 63%;
     background-size: 120%;
-  }
-  .generalcls h2 {
-    font-size: 20px !important;
-    line-height: normal !important;
-  }
-
-  .generalcls h2 br {
-    display: none;
   }
   .logowrapper {
     display: block !important;
@@ -863,14 +941,6 @@
     background: #01b2d3;
     padding: 20px !important;
     margin-top: 20px;
-  }
-  .generalcls h1 {
-    font-size: 20px !important;
-    line-height: normal !important;
-  }
-  .generalcls .mat-card-title {
-    margin: 0 auto;
-    width: 90%;
   }
   .c4hblock1content p {
     width: 100%;
@@ -907,6 +977,7 @@
   .c4hblock5 {
     margin-top: 0;
     padding-top: 40px !important;
+    background-color: transparent;
   }
   .c4hblock5 .logowrapper {
     padding-top: 0% !important;
@@ -947,13 +1018,27 @@
   }
 }
 
+@media (max-width: 900px) {
+.c4hblock2content .mat-list-base .mat-list-item {
+  width: 46%;
+}
+}
+
+
 @media (max-width: 767px) {
   .c4hblock2content .mat-list-base .mat-list-item {
     width: 100%;
   }
+  .c4hblock5 img {
+    width: inherit;
+    margin: 0px auto;
+}
 }
 
 @media (max-width: 540px) {
+  .c4hblock2bg.generalcls .mat-card-image-wrapper {
+    height: 115px;
+  }
   .bannerbottomsection h2 {
     font-size: 20px;
     line-height: normal;
@@ -969,5 +1054,13 @@
   .bannerbottomsection h3 {
     font-size: 18px;
     line-height: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .c4hblock5 .mat-button {
+    padding: 10px;
+    width: 90%;
+    font-size: 30px;
   }
 }
