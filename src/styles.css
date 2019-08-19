@@ -1101,6 +1101,18 @@ formcls .mat-select-panel .mat-option {
   }
 }
 
+@media (max-width: 1440px) {
+  .generalcls h1 {
+    font-size: 32px!important;
+    line-height: normal!important;
+  }
+  .c4hblock2bg .mat-card-header h2, .c4hblock3bg .mat-card-header h2 {
+    width: 62%;
+    margin: 0 auto;
+    font-size: 20px!important;
+    line-height: normal!important;
+}
+}
 
 @media (max-width: 1366px) {
   .generalcls h1 {
@@ -1132,7 +1144,14 @@ formcls .mat-select-panel .mat-option {
 }
 
 @media (max-width: 1199px) {
-  
+  .ptb-78 {
+    padding-top: 35px!important;
+    padding-bottom: 30px!important;
+    box-shadow: none!important;
+  }
+  .c4hblock1bg {
+    min-height: 425px;
+  }
   .generalcls h1 {
     font-size: 28px !important;
     line-height: 28px !important;
@@ -1154,6 +1173,10 @@ formcls .mat-select-panel .mat-option {
 }
 
 @media (max-width: 991px) {
+  .c4hblock5 img {
+    width: inherit;
+    margin: 5px auto;
+  }
   .ptb-78 {
     padding-top: 20px !important;
     padding-bottom: 10px !important;

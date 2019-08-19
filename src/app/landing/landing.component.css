@@ -920,7 +920,7 @@
     left: 0 !important;
     position: inherit !important;
     top: 0 !important;
-    padding-top: 73% !important;
+    padding-top: 71% !important;
     width: 100% !important;
     text-align: center !important;
   }
@@ -1058,6 +1058,9 @@
 }
 
 @media (max-width: 480px) {
+  .c4hblock2bg .mat-card-header h2, .c4hblock3bg .mat-card-header h2 {
+    font-size: 20px!important;
+}
   .c4hblock5 .mat-button {
     padding: 10px;
     width: 90%;
