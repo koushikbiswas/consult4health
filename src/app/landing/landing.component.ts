@@ -21,7 +21,7 @@ export class LandingComponent implements OnInit {
   windowScrolled: boolean;
 
   constructor(private readonly meta: MetaService, public router: Router, public route: ActivatedRoute, public fb: FormBuilder, public http: HttpClient, public dialog: MatDialog) {
-    this.meta.setTitle("consult 4 health");
+    this.meta.setTitle("consult 4 health:Home");
     this.meta.setTag("og:description", "consult 4 health ");
     this.meta.setTag("og:title", "consult 4 health ");
     this.meta.setTag("og:type", "https://consult4health.com");
